@@ -1,14 +1,14 @@
 //vehicle -->method get age.
 
-export const VehicleMake = {
+export enum VehicleMake {
 
-    FORD : 'FORD',
-    CHEVROLET : 'CHEVROLET',
-    SUBARU : 'SUBARU',
-    NISSAN : 'NISSAN',
+    DEFAULT = '',
+    FORD = 'Ford',
+    CHEVROLET = 'Chevy',
+    SUBARU = 'Subaru',
+    NISSAN ='Ford',
     //could be turned to numbers for switches
 }
-
 
 
 
@@ -16,11 +16,8 @@ export const VehicleMake = {
 export interface IVehicle{
 
 
-    make: typeof VehicleMake; //one of the types I assume. in string form or in previous form, (assumption)
+    make:VehicleMake; //one of the types I assume. in string form or in previous form, (assumption)
     model:string;
     year:number;
     age:number;
-
-
-
 }
